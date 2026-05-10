@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/fishflow-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FishFlow AI — AI-Powered Smart Harbor Platform for real fishermen in Mangalore. Real-time fish pricing, AI recommendations, multilingual voice support." />
+    <meta name="theme-color" content="#00e5ff" />
+    <title>FishFlow AI — Smart Harbor Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      /* Prevent FOUC */
+      body { opacity: 0; animation: reveal 0.3s ease 0.1s forwards; }
+      @keyframes reveal { to { opacity: 1; } }
+
+      /* Leaflet popup override for dark theme */
+      .leaflet-popup-content-wrapper {
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+      }
+      .leaflet-popup-content { margin: 0 !important; }
+      .leaflet-popup-tip { display: none !important; }
+      .leaflet-container { background: #0a0f1e !important; }
+      
+      /* Hide Google Translate UI elements */
+      .VIpgJd-ZVi9od-ORHb-OEVmcd { display: none !important; }
+      .goog-te-banner-frame { display: none !important; }
+      body { top: 0px !important; }
+      #google_translate_element { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
